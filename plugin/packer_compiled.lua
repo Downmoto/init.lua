@@ -99,6 +99,11 @@ _G.packer_plugins = {
     path = "/home/arad/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
   },
+  ["neodev.nvim"] = {
+    loaded = true,
+    path = "/home/arad/.local/share/nvim/site/pack/packer/start/neodev.nvim",
+    url = "https://github.com/folke/neodev.nvim"
+  },
   ["nordic.nvim"] = {
     loaded = true,
     path = "/home/arad/.local/share/nvim/site/pack/packer/start/nordic.nvim",

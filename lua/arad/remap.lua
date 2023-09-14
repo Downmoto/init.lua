@@ -14,14 +14,17 @@ vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 
 -- yank into clipboard
-vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
+vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
 vim.keymap.set("n", "<leader>Y", [["+Y]])
-
-
 
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
 vim.keymap.set("n", "<leader>so", function()
-    vim.cmd("so")
+  vim.cmd("so")
 end)
 
+vim.keymap.set("n", "<leader>fo", function()
+  vim.lsp.buf.format()
+end)
+
+vim.keymap.set("i", "<S-Tab>", "<C-o>a")

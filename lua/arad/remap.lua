@@ -1,5 +1,4 @@
 vim.g.mapleader = " "
-vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
 -- Move blocks up and down
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
@@ -19,12 +18,14 @@ vim.keymap.set("n", "<leader>Y", [["+Y]])
 
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
-vim.keymap.set("n", "<leader>so", function()
-  vim.cmd("so")
-end)
-
 vim.keymap.set("n", "<leader>fo", function()
   vim.lsp.buf.format()
 end)
 
 vim.keymap.set("i", "<S-Tab>", "<C-o>a")
+
+vim.api.nvim_set_keymap(
+  'n',
+  '<leader>o',
+  [[:call append(line('.'), '')<CR>:call append(line('.') + 2, '')<CR>kkjjI]],
+  { noremap = true, silent = true })

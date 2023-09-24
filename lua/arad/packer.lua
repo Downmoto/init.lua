@@ -10,7 +10,6 @@ return require('packer').startup(function(use)
   use 'ggandor/leap.nvim'
   use 'tpope/vim-repeat'
 
-  use 'sunjon/shade.nvim'
 
   use {
 
@@ -32,6 +31,7 @@ return require('packer').startup(function(use)
   }
 
   use 'AlexvZyl/nordic.nvim'
+  use 'bluz71/vim-nightfly-colors'
 
   use {
     'nvim-treesitter/nvim-treesitter',

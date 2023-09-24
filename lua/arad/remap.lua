@@ -29,3 +29,6 @@ vim.api.nvim_set_keymap(
   '<leader>o',
   [[:call append(line('.'), '')<CR>:call append(line('.') + 2, '')<CR>kkjjI]],
   { noremap = true, silent = true })
+
+-- Awesome semicolon magic remap
+vim.keymap.set("i", ";<CR>", "<end>;<CR>")
